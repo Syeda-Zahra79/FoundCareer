@@ -1,0 +1,95 @@
+.container {
+  padding: 2% 8%;
+  border: 1px solid black;
+  margin: 2em;
+  width:20em;
+  height: 22em;
+}
+
+.employType {
+  padding: 3% 5%;
+  color: white;
+  background: #70bc69;
+  border-radius: 50px;
+  display: inline;
+  font-weight: 600;
+}
+
+.salary {
+  display: inline;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10%;
+}
+.content {
+  margin: auto;
+  position: relative;
+  .button-container {
+    position: absolute;
+    bottom: -70px;
+  }
+}
+
+.title {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0;
+  height: 2.5em;
+}
+
+.company-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto 0;
+  height: fit-content;
+
+  img {
+    padding-right: 5%;
+  }
+  h4 {
+    margin: 0;
+    font-weight: 600;
+    color: #636262;
+  }
+
+}
+
+.description {
+  width: 90%;
+  text-align: center;
+  margin: 10% auto 5%;
+  color: #808080ad;
+  font-size: .8rem;
+}
+
+hr {
+  color: #808080ad;
+  border: 1px solid #808080ad;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.button-container {
+  padding: 5%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+
+ button {
+   padding: 3% 7%;
+   border: 1px solid black;
+   border-radius: 50px;
+   background: none;
+   margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+ }
+}

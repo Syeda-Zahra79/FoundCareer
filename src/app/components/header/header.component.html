@@ -1,0 +1,31 @@
+<header>
+    <img class="logo" src="../../../assets/FoundCareer.png" alt="FoundCareer" height="25" >
+    <nav>
+        <a [routerLink]="'/'" >Home</a>
+        <a [routerLink]="'/about'">About</a>
+        <a [routerLink]="'/contact'">Contact</a>
+        <button [routerLink]="'/jobs'" >Find Jobs</button>
+    </nav>
+
+    <button (click)="handleMenuClick()" class="menu-button" >
+        <img src="../../../assets/menu.png" alt="Menu Icon" width="30" height="30">
+    </button>
+</header>
+@if(menuClick) {
+    <div class="mobile-nav">
+        <div class="close-btn">
+            <button (click)="handleMenuClick()">
+                <img src="../../../assets/close1437.jpg" alt="Close Icon" height="40" width="40">
+            </button>
+        </div>
+        <nav class="links">
+            <a [routerLink]="'/'" >Home</a>
+            <hr>
+            <a [routerLink]="'/about'">About</a>
+            <hr>
+            <a [routerLink]="'/contact'">Contact</a>
+            <hr>
+            <button [routerLink]="'/jobs'" >Find Jobs</button>
+        </nav>
+    </div>
+}

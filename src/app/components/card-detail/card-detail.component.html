@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="inner-container" id="{{ job.id }}">
+    <button (click)="close()">
+      <img
+        src="../../../assets/close1437.jpg"
+        alt="Close button"
+        width="35"
+        height="30"
+      />
+    </button>
+    <p>
+      Job Title : <span>{{ job.title }}</span>
+    </p>
+    <p>
+      Company : <span>{{ job.company }}</span>
+    </p>
+    <p>Job Description :</p>
+    @if (needTextList) {
+    <p class="description">
+      {{ job.description }}
+    </p>
+    } @else {
+    <p class="description">
+      {{ textList[0] }}
+    </p>
+    <ul>
+      @for (list of descriptionList; track $index) {
+      <li class="description">{{ list }}</li>
+      }
+    </ul>
+    <p class="description">{{ textList[1] }}</p>
+    } 
+    
+    @if (job.employmentType) {
+    <p>
+      Job Type :
+      <span>
+        {{ job.employmentType }}
+      </span>
+    </p>
+    } 
+    @if (job.salaryRange) {
+    <p>
+      Estimated Price : <span>{{ job.salaryRange }}</span>
+    </p>
+    }
+    <p>
+      Posted on :
+      <span>
+        {{ job.datePosted }}
+      </span>
+    </p>
+  </div>
+</div>

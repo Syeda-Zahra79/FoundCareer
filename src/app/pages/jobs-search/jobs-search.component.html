@@ -1,0 +1,23 @@
+
+<app-search (search)="getResults()"></app-search>
+
+<div style="display: flex; flex-wrap: wrap; margin: 5%; justify-content: space-evenly;" [ngClass]="{'bg-blur' : detailJobStatus}">
+    @if(jobsList.length == 0) {
+        <h1>No Search Results Found</h1>
+    } @else {
+        @for (job of jobsList; track job.id) {
+            <app-card [job]="job" (JobDetail)="openDetail($event)"></app-card>
+        }
+    }
+</div>
+
+@if (detailJobStatus) {
+    <app-card-detail [job]="detailJob" (closeDetail)="closeDetail()"></app-card-detail>
+} 
+
+@if(jobsList.length !== 0) {
+    <div class="button-container">
+        <button (click)="getPrev()" >Previous</button>
+        <button (click)="getNext()" >Next</button>
+    </div>
+}

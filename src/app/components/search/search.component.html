@@ -1,0 +1,22 @@
+<!-- <input type="text" [value]="searchValue" (change)="handleInputChange($event)" placeholder="location">
+<button (click)="check()">Search Location</button>
+
+<input type="text" [value]="searchJob" (change)="handleInputJob($event)" placeholder="title, keyword, job">
+<button (click)="check()">Search Job</button>
+
+<button 
+(click)="getJobRequest()"
+>Explore</button>  -->
+
+<div class="container">
+    <div class="jobInput">
+        <img src="../../../assets/job-icon.png" alt="Job Icon" height="20" width="20">
+        <input type="text" placeholder="Job, title, keyword" [value]="searchJob" (change)="handleJobChange($event)">
+    </div>
+    <div class="locationInput">
+        <img src="../../../assets/location-icon.png" alt="Location Icon" height="23" width="23">
+        <input type="text" placeholder="Location"
+        [value]="searchLocation" (change)="handleLocationChange($event)">
+    </div>
+    <button (click)="buttonHandle()">Explore</button>
+</div>

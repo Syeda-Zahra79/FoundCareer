@@ -1,0 +1,30 @@
+ <div class="container">
+    @if(job.employmentType) {
+        <div class="top-container">
+         <p class="employType">{{job.employmentType }}</p>
+         @if (job.salaryRange != "") {
+             <p class="salary">{{job.salaryRange}}/hr</p>
+         }
+        </div>
+    }
+   <div class="content">
+    <h3 class="title">
+        {{job.title.length > 20 ? job.title.slice(0, 20) : job.title}}
+    </h3>
+    <div class="company-container">
+        <img src="../../../assets/company-logo.png" alt="Company Logo" height="25" width="25">
+        <h4>
+            {{job.company.length > 20 ? job.company.slice(0, 20) : job.company}}
+        </h4>
+    </div>
+
+    <p class="description">  {{job.description.length > 50 ? job.description.slice(0, 50) + '...' : job.description}}</p>
+    <hr>
+    <div class="button-container">
+        <button (click)="openDetail()">View Job</button>
+        <!-- @if (detailCick) {
+            <app-card-detail [job]="job"></app-card-detail>
+        } -->
+    </div>
+   </div>
+</div>
